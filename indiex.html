@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para la mujer más bella</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .volume-slider {
+      width: 100px;
+    }
+    .second-section {
+      margin-top: 100px;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #131318, #55566a);
+      color: #fff;
+    }
+    .second-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .second-gallery img {
+      width: 200px;
+      height: 260px;
+      border-radius: 1rem;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(255, 193, 111, 0.6);
+      transition: transform 0.3s ease;
+    }
+    .second-gallery img:hover {
+      transform: scale(1.05);
+    }
+    .second-message h2 {
+      font-family: "Dancing Script", cursive;
+      font-size: 2.5rem;
+      color: #ffc16f;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .second-message p {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="stack">
+      <div class="card"><img src="images/25.jpg" alt="Imagen 25" /></div>
+      <div class="card"><img src="images/26.jpg" alt="Imagen 26" /></div>
+      <div class="card"><img src="images/27.jpg" alt="Imagen 27" /></div>
+      <div class="card"><img src="images/24.jpg" alt="Imagen 24" /></div>
+      <div class="card"><img src="images/6.png" alt="Imagen 6" /></div>
+      <div class="card"><img src="images/1.jpg" alt="Imagen 1" /></div>
+      <div class="card"><img src="images/22.jpg" alt="Imagen 22" /></div>
+      <div class="card"><img src="images/3.jpg" alt="Imagen 3" /></div>
+      <div class="card"><img src="images/4.jpg" alt="Imagen 4" /></div>
+    </div>
+
+    <div class="content">
+      <h1>Para la mujer más bella</h1>
+      <p>
+        Amof mío, <br>
+        Cada día que pasa me doy cuenta de lo afortunado que soy por tenerte en mi vida. Eres la mujer más bella, no solo por tu apariencia, que me deja sin aliento, sino por tu bondad, tu inteligencia y tu increíble capacidad de hacer que cada día sea mejor que el anterior. Tu sonrisa ilumina mis días y tu risa es la melodía más dulce que he escuchado.
+        Contigo, cada momento se convierte en una aventura maravillosa. Me inspiras a ser la mejor versión de mí mismo y me das fuerzas cuando más lo necesito.
+        <br>
+        Con todo mi amor,<br>
+        @Tunovio
+      </p>
+      <div class="audio-controls">
+        <audio id="bgMusic" src="./audio/Amor - Alta Elegancia.mp3" controls loop autoplay></audio>
+        <input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
+      </div>
+    </div>
+  </main>
+
+  <section class="second-section">
+    <div class="second-gallery">
+      <img src="./images/1.jpg" alt="">
+      <img src="./images/3.jpg" alt="">
+      <img src="./images/4.jpg" alt="">
+      <img src="./images/5.png" alt="">
+    </div>
+    <div class="second-message">
+      <h2>Para la mujer más bella</h2>
+      <p>
+        Quiero agradecerte por hacerme el chico más feliz de todo el mundo. Te amo demasiado camaroncita bella, te amo mucho mi chinita bella, peshosha y hermosa. Te adoro con todo mi corazón, daría la vida por ti mi amor. Quiero que sepas que me importas mucho y que hice esto para que veas que te amo muchote, mi amof. Quiero que la pasemos felices hoy día camaroncita y solo te digo:<br><br>
+        <strong>Felices 6 meses camaroncita, te amo mucho.</strong><br><br>
+        Con todo mi amor para mi camaroncita,<br>
+        @tuoshitoenojon #teamoshadialoverafelipa
+      </p>
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
+  <script>
+    const volumeSlider = document.getElementById('volume');
+    const audio = document.getElementById('bgMusic');
+    volumeSlider.addEventListener('input', () => {
+      audio.volume = volumeSlider.value;
+    });
+  </script>
+</body>
+</html>
